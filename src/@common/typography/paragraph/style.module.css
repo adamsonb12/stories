@@ -1,0 +1,15 @@
+.paragraph {
+  & strong,
+  & b {
+    font-weight: 900;
+  }
+  & a {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  & em,
+  & i {
+    font-style: italic;
+  }
+}
