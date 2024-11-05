@@ -1,0 +1,32 @@
+{
+    "characters": [
+        {
+            "name": "Rick Sanchez",
+            "species": "Human"
+        },
+        {
+            "name": "Morty Smith",
+            "species": "Human"
+        },
+        {
+            "name": "Summer Smith",
+            "species": "Human"
+        },
+        {
+            "name": "Beth Smith",
+            "species": "Human"
+        },
+        {
+            "name": "Jerry Smith",
+            "species": "Human"
+        },
+        {
+            "name": "Abadango Cluster Princess",
+            "species": "Alien"
+        },
+        {
+            "name": "Abradolf Lincler",
+            "species": "Human"
+        }
+    ]
+}
