@@ -26,7 +26,6 @@ interface UpdateUserInput {
 
 interface SubmitGuess {
     type: "SUBMIT_GUESS";
-    payload: string;
 }
 
 type WordleAction = UpdateWordleWord | UpdateUserInput | SubmitGuess;
@@ -47,7 +46,7 @@ const wordleReducer = (prevState: WordleState, action: WordleAction): WordleStat
                 return prevState;
             }
 
-            return { ...prevState, guesses: [...prevState.guesses, { id: v4(), guess: action.payload }] };
+            return { ...prevState, guesses: [...prevState.guesses, { id: v4(), guess: prevState.userInput }], userInput: "" };
         
         default:
             return prevState;
@@ -61,10 +60,8 @@ const useWordleReducer = (defaultState?: WordleState) => {
 
 export const initialState: WordleState = {
     word: "hello",
-    guesses: [
-        { id: v4(), guess: "sound" }
-    ],
-    userInput: "as",
+    guesses: [],
+    userInput: "",
     guessLimit: 6
 }
 

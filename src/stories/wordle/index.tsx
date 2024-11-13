@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GuessesGrid } from "./guesses-grid";
 import { initialState, WordleProvider } from "./state";
+import { Keyboard } from "./keyboard";
 
 export const Wordle = () => {
     const [loading, setLoading] = useState(true);
@@ -32,9 +33,9 @@ export const Wordle = () => {
 
 const WordleGame = () => {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-8 items-center">
             <GuessesGrid />
-            {/* <Keyboard /> */}
+            <Keyboard />
         </div>
     )
 }
